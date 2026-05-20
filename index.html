@@ -210,75 +210,111 @@
   <section id="famiri" class="famiri-section">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Exclusief Lidmaatschap</span>
+        <span class="section-label">Steun Het Ambacht</span>
         <h2 class="section-title">Word <span style="color: var(--clr-primary)">Famiri</span></h2>
-        <p class="section-subtitle">Sluit je aan bij de Sranang Koekoe Famiri — onze exclusieve kring van ambachtsliefhebbers.</p>
+        <p class="section-subtitle">Steun de baktraditie van moesje. Kies je niveau — elke bijdrage houdt het ambacht levend.</p>
       </div>
 
-      <div class="famiri-grid">
-        <div class="famiri-gift-card fade-in">
-          <div class="famiri-gift-img" onclick="openLightbox('images/famiri-gift.jpg')" style="cursor:zoom-in">
-            <img src="images/famiri-gift.jpg" alt="Famiri Welkomstcadeau" loading="lazy">
+      <!-- Tier Cards -->
+      <div class="tier-grid fade-in">
+
+        <!-- MATI -->
+        <div class="tier-card" data-tier="mati">
+          <div class="tier-header">
+            <span class="tier-emoji">🌱</span>
+            <h3 class="tier-name">Mati</h3>
+            <p class="tier-meaning">Vriend</p>
           </div>
+          <div class="tier-price">€2,95<span>/mnd</span></div>
+          <ul class="tier-perks">
+            <li class="perk-yes">5% korting op bestellingen</li>
+            <li class="perk-yes">Naam in de Famiri-lijst</li>
+            <li class="perk-yes">Welkomstbericht</li>
+            <li class="perk-no">Sranang Koekoe mok</li>
+            <li class="perk-no">Behind the scenes</li>
+            <li class="perk-no">Baka Nanga Moesje (Zoom)</li>
+          </ul>
+          <button class="tier-btn" onclick="openFamiriSignup('mati')">Word Mati</button>
+        </div>
+
+        <!-- FAMIRI (popular) -->
+        <div class="tier-card tier-popular" data-tier="famiri">
+          <div class="tier-popular-badge">Populairste</div>
+          <div class="tier-header">
+            <span class="tier-emoji">🤝</span>
+            <h3 class="tier-name">Famiri</h3>
+            <p class="tier-meaning">Familie</p>
+          </div>
+          <div class="tier-price">€6,95<span>/mnd</span></div>
+          <ul class="tier-perks">
+            <li class="perk-yes">12% korting op bestellingen</li>
+            <li class="perk-yes">Naam met gouden badge</li>
+            <li class="perk-yes">Sranang Koekoe mok</li>
+            <li class="perk-yes">Art print naar keuze</li>
+            <li class="perk-yes">Behind the scenes</li>
+            <li class="perk-no">Baka Nanga Moesje (Zoom)</li>
+          </ul>
+          <button class="tier-btn tier-btn-primary" onclick="openFamiriSignup('famiri')">Word Famiri</button>
+        </div>
+
+        <!-- BIGI FAMIRI -->
+        <div class="tier-card" data-tier="bigi">
+          <div class="tier-header">
+            <span class="tier-emoji">👑</span>
+            <h3 class="tier-name">Bigi Famiri</h3>
+            <p class="tier-meaning">Grote Familie</p>
+          </div>
+          <div class="tier-price">€14,95<span>/mnd</span></div>
+          <ul class="tier-perks">
+            <li class="perk-yes">20% korting op bestellingen</li>
+            <li class="perk-yes">Kroontje + bovenaan de lijst</li>
+            <li class="perk-yes">Mok + ingelijste art print</li>
+            <li class="perk-yes">Behind the scenes</li>
+            <li class="perk-yes">Baka Nanga Moesje (Zoom)</li>
+            <li class="perk-yes">Ontmoeting bij moesje thuis</li>
+          </ul>
+          <button class="tier-btn" onclick="openFamiriSignup('bigi')">Word Bigi Famiri</button>
+        </div>
+      </div>
+
+      <!-- Photo Chooser (for Famiri + Bigi Famiri) -->
+      <div class="famiri-photo-section fade-in" id="famiriPhotoSection">
+        <div class="famiri-gift-preview" onclick="openLightbox('images/famiri-gift.jpg')" style="cursor:zoom-in">
+          <img src="images/famiri-gift.jpg" alt="Famiri Art Print" loading="lazy">
           <div class="famiri-gift-badge">VIP CADEAU</div>
-          <p class="famiri-gift-desc">Bij je eerste bestelling als Famiri-lid ontvang je een <strong>exclusieve Limited Edition art print</strong> van Suriname — prachtig ingelijst, klaar om op te hangen. <em>Kies hieronder jouw favoriete motief.</em></p>
-          <div class="famiri-photo-chooser">
-            <div class="famiri-thumb active" onclick="selectFamiriPhoto(this)" data-src="images/hero-paramaribo.jpg"><img src="images/hero-paramaribo.jpg" alt="Waterkant"></div>
-            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-waterval.jpg"><img src="images/suriname-waterval.jpg" alt="Waterval"></div>
-            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-rivier.jpg"><img src="images/suriname-rivier.jpg" alt="Rivier"></div>
-            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-awarradam.jpg"><img src="images/suriname-awarradam.jpg" alt="Awarradam"></div>
-            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-bigi-pan.jpg"><img src="images/suriname-bigi-pan.jpg" alt="Bigi Pan"></div>
-            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-voltzberg.jpg"><img src="images/suriname-voltzberg.jpg" alt="Voltzberg"></div>
-          </div>
         </div>
-
-        <div class="famiri-benefits fade-in">
-          <div class="famiri-benefit">
-            <span class="famiri-benefit-icon">🎁</span>
-            <div>
-              <h4>Welkomstcadeau</h4>
-              <p>Kies je favoriete Suriname-print — ingelijst en gratis bij je eerste bestelling</p>
-            </div>
-          </div>
-          <div class="famiri-benefit">
-            <span class="famiri-benefit-icon">💰</span>
-            <div>
-              <h4>12% Famiri-korting</h4>
-              <p>Levenslang korting op al je bestellingen met je persoonlijke code</p>
-            </div>
-          </div>
-          <div class="famiri-benefit">
-            <span class="famiri-benefit-icon">🎬</span>
-            <div>
-              <h4>Achter de Schermen</h4>
-              <p>Exclusieve toegang tot behind-the-scenes content uit onze keuken</p>
-            </div>
-          </div>
-          <div class="famiri-benefit">
-            <span class="famiri-benefit-icon">🌟</span>
-            <div>
-              <h4>Eerst Proeven</h4>
-              <p>Als eerste nieuwe seizoensproducten uitproberen</p>
-            </div>
-          </div>
-
-          <div class="famiri-signup">
-            <div class="famiri-price-tag">
-              <span class="famiri-price">€4,95</span>
-              <span class="famiri-price-label">per maand · steun het ambacht</span>
-            </div>
-            <form id="famiriForm" class="famiri-form" action="https://formspree.io/f/mlgvjpgz" method="POST">
-              <input type="hidden" name="_subject" value="Nieuw Famiri-lid!">
-              <input type="hidden" name="type" value="famiri-aanmelding">
-              <input type="hidden" name="gekozen_print" id="famiriChosenPrint" value="Paramaribo Waterkant">
-              <input type="text" name="naam" placeholder="Je volledige naam" required>
-              <input type="email" name="email" placeholder="Je e-mailadres" required>
-              <button type="submit" class="famiri-submit-btn">Word Famiri — €4,95/mnd 🎉</button>
-            </form>
-            <p class="famiri-disclaimer">Je ontvangt je persoonlijke Famiri-code per e-mail. Opzeggen kan altijd. Het cadeau wordt bij je eerste bestelling meegeleverd.</p>
+        <div class="famiri-photo-info">
+          <h3>Kies jouw art print</h3>
+          <p>Famiri- en Bigi Famiri-leden kiezen hun favoriete Suriname-beeld als welkomstcadeau.</p>
+          <div class="famiri-photo-chooser">
+            <div class="famiri-thumb active" onclick="selectFamiriPhoto(this)"><img src="images/hero-paramaribo.jpg" alt="Waterkant"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)"><img src="images/suriname-waterval.jpg" alt="Waterval"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)"><img src="images/suriname-rivier.jpg" alt="Rivier"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)"><img src="images/suriname-awarradam.jpg" alt="Awarradam"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)"><img src="images/suriname-bigi-pan.jpg" alt="Bigi Pan"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)"><img src="images/suriname-voltzberg.jpg" alt="Voltzberg"></div>
           </div>
         </div>
       </div>
+
+      <!-- Signup Modal (hidden by default) -->
+      <div class="famiri-signup-overlay" id="famiriSignupOverlay" style="display:none">
+        <div class="famiri-signup-modal">
+          <button class="famiri-signup-close" onclick="closeFamiriSignup()">✕</button>
+          <h3 id="famiriSignupTitle">Word Famiri</h3>
+          <p id="famiriSignupDesc">Je ontvangt je persoonlijke kortingscode per e-mail.</p>
+          <form id="famiriForm" class="famiri-form" action="https://formspree.io/f/mlgvjpgz" method="POST">
+            <input type="hidden" name="_subject" value="Nieuw Famiri-lid!">
+            <input type="hidden" name="tier" id="famiriTierInput" value="famiri">
+            <input type="hidden" name="gekozen_print" id="famiriChosenPrint" value="Waterkant">
+            <input type="text" name="naam" placeholder="Je volledige naam" required>
+            <input type="email" name="email" placeholder="Je e-mailadres" required>
+            <button type="submit" class="famiri-submit-btn" id="famiriSubmitBtn">Aanmelden — €6,95/mnd</button>
+          </form>
+          <p class="famiri-disclaimer">Betaling wordt apart geregeld via iDEAL/PayPal. Opzeggen kan altijd.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 

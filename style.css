@@ -592,157 +592,240 @@ h1, h2, h3, h4 {
   background: linear-gradient(180deg, var(--bg-primary) 0%, #fdf5e6 100%);
 }
 
-.famiri-grid {
+/* Tier Grid */
+.tier-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
-/* Gift Card */
-.famiri-gift-card {
+.tier-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tier-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(62, 29, 26, 0.12);
+}
+
+.tier-popular {
+  border: 2px solid var(--clr-primary);
+  transform: scale(1.04);
+  box-shadow: 0 12px 40px rgba(212, 168, 67, 0.2);
+}
+
+.tier-popular:hover {
+  transform: scale(1.04) translateY(-6px);
+}
+
+.tier-popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 1.2rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.tier-header { margin-bottom: 1rem; }
+
+.tier-emoji { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+
+.tier-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.1rem;
+}
+
+.tier-meaning {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.tier-price {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: 1.5rem;
+}
+
+.tier-price span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.tier-perks {
+  list-style: none;
+  text-align: left;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.tier-perks li {
+  padding: 0.45rem 0;
+  font-size: 0.88rem;
+  padding-left: 1.6rem;
+  position: relative;
+  line-height: 1.3;
+}
+
+.tier-perks .perk-yes::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.tier-perks .perk-no {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.tier-perks .perk-no::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #ccc;
+}
+
+.tier-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--clr-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tier-btn:hover {
+  background: var(--clr-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.tier-btn-primary {
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  color: #fff;
+  border-color: transparent;
+}
+
+.tier-btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(212, 168, 67, 0.4);
+}
+
+/* Photo Section */
+.famiri-photo-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.famiri-gift-preview {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(62, 29, 26, 0.12);
 }
 
-.famiri-gift-img img {
+.famiri-gift-preview img {
   width: 100%;
   display: block;
 }
 
-.famiri-gift-badge {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  padding: 0.4rem 1rem;
-  border-radius: 50px;
-}
-
-.famiri-gift-desc {
-  padding: 1.5rem;
-  background: #fff;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* Benefits */
-.famiri-benefits {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.famiri-benefit {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.2rem;
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-  transition: transform 0.3s;
-}
-
-.famiri-benefit:hover {
-  transform: translateX(4px);
-}
-
-.famiri-benefit-icon {
-  font-size: 1.6rem;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
-
-.famiri-benefit h4 {
+.famiri-photo-info h3 {
   font-family: var(--font-heading);
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.famiri-benefit p {
-  font-size: 0.85rem;
+.famiri-photo-info p {
   color: var(--text-secondary);
-  line-height: 1.4;
-}
-
-/* Signup */
-.famiri-signup {
-  margin-top: 0.5rem;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
-  border-radius: var(--radius-lg);
-  color: #fff;
-}
-
-.famiri-signup h3 {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
-.famiri-form {
+/* Signup Modal */
+.famiri-signup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-.famiri-form input {
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: var(--radius);
-  font-size: 0.9rem;
-  font-family: var(--font-body);
-  background: rgba(255,255,255,0.95);
-  color: var(--text-primary);
-}
-
-.famiri-form input::placeholder {
-  color: #999;
-}
-
-.famiri-submit-btn {
-  padding: 0.8rem;
-  border: 2px solid #fff;
-  border-radius: var(--radius);
-  background: transparent;
-  color: #fff;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s;
-  letter-spacing: 0.02em;
-}
-
-.famiri-submit-btn:hover {
+.famiri-signup-modal {
   background: #fff;
-  color: var(--clr-primary-dark);
-  transform: translateY(-2px);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.2);
 }
 
-.famiri-disclaimer {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  margin-top: 0.6rem;
-  text-align: center;
+.famiri-signup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.famiri-signup-close:hover { color: var(--text-primary); }
+
+.famiri-signup-modal h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.famiri-signup-modal > p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Photo Chooser */
 .famiri-photo-chooser {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem 1.5rem 1.5rem;
-  background: #fff;
   flex-wrap: wrap;
 }
 
@@ -757,10 +840,7 @@ h1, h2, h3, h4 {
   opacity: 0.6;
 }
 
-.famiri-thumb:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
+.famiri-thumb:hover { opacity: 1; transform: scale(1.05); }
 
 .famiri-thumb.active {
   border-color: var(--clr-primary);
@@ -768,40 +848,11 @@ h1, h2, h3, h4 {
   box-shadow: 0 2px 12px rgba(212, 168, 67, 0.4);
 }
 
-.famiri-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Price Tag */
-.famiri-price-tag {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-}
-
-.famiri-price {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.famiri-price-label {
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
+.famiri-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
 /* Discount Code in Order Form */
-.famiri-code-row {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.famiri-code-row input {
-  flex: 1;
-}
+.famiri-code-row { display: flex; gap: 0.5rem; }
+.famiri-code-row input { flex: 1; }
 
 .famiri-code-btn {
   padding: 0.6rem 1.2rem;
@@ -817,27 +868,19 @@ h1, h2, h3, h4 {
   white-space: nowrap;
 }
 
-.famiri-code-btn:hover {
-  background: var(--clr-primary-dark);
-}
+.famiri-code-btn:hover { background: var(--clr-primary-dark); }
 
-.famiri-code-msg {
-  font-size: 0.8rem;
-  margin-top: 0.4rem;
-  min-height: 1.2em;
-}
-
+.famiri-code-msg { font-size: 0.8rem; margin-top: 0.4rem; min-height: 1.2em; }
 .famiri-code-msg.success { color: #27ae60; }
 .famiri-code-msg.error { color: #e74c3c; }
 
-/* Discount Row */
-.discount-row span:first-child {
-  color: #27ae60;
-  font-weight: 500;
-}
+.discount-row span:first-child { color: #27ae60; font-weight: 500; }
 
 @media (max-width: 768px) {
-  .famiri-grid { grid-template-columns: 1fr; }
+  .tier-grid { grid-template-columns: 1fr; }
+  .tier-popular { transform: none; }
+  .tier-popular:hover { transform: translateY(-6px); }
+  .famiri-photo-section { grid-template-columns: 1fr; }
   .famiri-thumb { width: 50px; height: 50px; }
 }
 

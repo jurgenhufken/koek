@@ -71,9 +71,14 @@ const cart = {};
 let deliveryFee = 0;
 let famiriDiscount = 0; // 0 = no discount, 0.12 = 12%
 
-// ---- Famiri Loyalty System ----
-const FAMIRI_CODES = ['FAMIRI2026', 'FAMIRI-VIP', 'SRANANG-FAMIRI']; // Add codes here
-const FAMIRI_DISCOUNT_PERCENT = 0.12;
+// ---- Famiri Loyalty System (Tiered) ----
+const FAMIRI_TIERS = {
+  'MATI2026':   { tier: 'Mati',        discount: 0.05 },
+  'FAMIRI2026': { tier: 'Famiri',       discount: 0.12 },
+  'BIGI2026':   { tier: 'Bigi Famiri',  discount: 0.20 },
+  // Add personal codes here:
+  // 'FAMIRI-NAAM-XX': { tier: 'Famiri', discount: 0.12 },
+};
 
 function applyDiscount() {
   const input = document.getElementById('famiriCode');
@@ -81,24 +86,27 @@ function applyDiscount() {
   const code = input.value.trim().toUpperCase();
 
   if (!code) {
+    famiriDiscount = 0;
     msg.textContent = '';
     msg.className = 'famiri-code-msg';
+    renderCart();
     return;
   }
 
-  if (FAMIRI_CODES.includes(code)) {
-    famiriDiscount = FAMIRI_DISCOUNT_PERCENT;
-    msg.textContent = '✓ Famiri-code geaccepteerd! 12% korting toegepast.';
+  const match = FAMIRI_TIERS[code];
+  if (match) {
+    famiriDiscount = match.discount;
+    const pct = Math.round(match.discount * 100);
+    msg.textContent = `✓ ${match.tier}-code geaccepteerd! ${pct}% korting toegepast.`;
     msg.className = 'famiri-code-msg success';
     input.style.borderColor = '#27ae60';
-    renderCart();
   } else {
     famiriDiscount = 0;
     msg.textContent = '✗ Ongeldige code. Word Famiri om een code te ontvangen.';
     msg.className = 'famiri-code-msg error';
     input.style.borderColor = '#e74c3c';
-    renderCart();
   }
+  renderCart();
 }
 
 function selectFamiriPhoto(el) {
@@ -108,6 +116,37 @@ function selectFamiriPhoto(el) {
   const hiddenInput = document.getElementById('famiriChosenPrint');
   if (hiddenInput) hiddenInput.value = altText;
 }
+
+// Signup Modal
+const TIER_INFO = {
+  mati: { name: 'Mati', price: '€2,95/mnd', desc: 'Je ontvangt je Mati-code (5% korting) per e-mail.' },
+  famiri: { name: 'Famiri', price: '€6,95/mnd', desc: 'Je ontvangt je Famiri-code (12% korting), een mok en je gekozen art print.' },
+  bigi: { name: 'Bigi Famiri', price: '€14,95/mnd', desc: 'Je ontvangt je Bigi Famiri-code (20% korting), mok, ingelijste print en exclusieve VIP-toegang.' }
+};
+
+function openFamiriSignup(tier) {
+  const info = TIER_INFO[tier];
+  if (!info) return;
+  document.getElementById('famiriSignupTitle').textContent = `Word ${info.name}`;
+  document.getElementById('famiriSignupDesc').textContent = info.desc;
+  document.getElementById('famiriTierInput').value = tier;
+  document.getElementById('famiriSubmitBtn').textContent = `Aanmelden — ${info.price}`;
+  document.getElementById('famiriSignupOverlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeFamiriSignup() {
+  document.getElementById('famiriSignupOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close modal on overlay click
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'famiriSignupOverlay') closeFamiriSignup();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeFamiriSignup();
+});
 
 // ---- Navigation ----
 const navbar = document.getElementById('navbar');
@@ -365,8 +404,25 @@ function updateCartDisplay() {
   cartItemsEl.innerHTML = html;
   totalsEl.style.display = 'block';
 
-  const total = subtotal + deliveryFee;
+  // Calculate discount
+  const discountAmt = subtotal * famiriDiscount;
+  const discountedSubtotal = subtotal - discountAmt;
+  const total = discountedSubtotal + deliveryFee;
+
   document.getElementById('subtotal').textContent = `€${subtotal.toFixed(2)}`;
+
+  // Show/hide discount row
+  const discountRow = document.getElementById('discountRow');
+  const discountAmountEl = document.getElementById('discountAmount');
+  if (famiriDiscount > 0 && subtotal > 0) {
+    discountRow.style.display = 'flex';
+    const pct = Math.round(famiriDiscount * 100);
+    discountRow.querySelector('span:first-child').textContent = `Famiri-korting (${pct}%)`;
+    discountAmountEl.textContent = `−€${discountAmt.toFixed(2)}`;
+  } else {
+    discountRow.style.display = 'none';
+  }
+
   document.getElementById('deliveryCost').textContent = deliveryFee > 0 ? `€${deliveryFee.toFixed(2)}` : 'Gratis';
   document.getElementById('totalAmount').textContent = `€${total.toFixed(2)}`;
 }
