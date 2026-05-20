@@ -20,9 +20,9 @@ const PRODUCTS = {
     desc: 'De Eksi Kuku is de koningin van de Surinaamse koek. Deze iconische, luchtige eiercake heeft een prachtige goudgele kleur en wordt traditioneel afgewerkt met kleurrijke suikermuisjes. Het recept vereist vakmanschap — het beslag moet 15-20 minuten lang opgeklopt worden voor de perfecte luchtigheid.',
     ingredients: 'Eieren, suiker, patentbloem, roomboter, vanille-essence, suikermuisjes',
     sizes: [
-      { name: 'Medium', info: 'Ø 20 cm · 4-6 pers.', price: 18.50 },
-      { name: 'Groot', info: 'Ø 24 cm · 8-10 pers.', price: 27.50 },
-      { name: 'Feest', info: 'Ø 30 cm · 12-16 pers.', price: 38.00 }
+      { name: 'Medium', info: 'Ø 20 cm · 4-6 stukken', price: 18.50 },
+      { name: 'Groot', info: 'Ø 24 cm · 8-10 stukken', price: 27.50 },
+      { name: 'Feest', info: 'Ø 30 cm · 12-16 stukken', price: 38.00 }
     ],
     details: { levertijd: '2 dagen', houdbaarheid: '3 dagen', allergenen: 'Gluten, ei, melk' }
   },
@@ -33,9 +33,9 @@ const PRODUCTS = {
     desc: 'De Keksi is een rijke, donkere vruchtencake vol rozijnen, krenten en gedroogde pruimen, geweekt in Surinaamse rum. De warme kaneel en nootmuskaat geven deze koek zijn onmiskenbare karakter. Een absolute favoriet bij feestelijke gelegenheden.',
     ingredients: 'Eieren, bruine basterdsuiker, bloem, roomboter, rozijnen, krenten, pruimen, kaneel, nootmuskaat, Borgoe rum',
     sizes: [
-      { name: 'Medium', info: 'Ø 20 cm · 4-6 pers.', price: 20.00 },
-      { name: 'Groot', info: 'Ø 24 cm · 8-10 pers.', price: 30.00 },
-      { name: 'Feest', info: 'Ø 28 cm · 12-16 pers.', price: 42.00 }
+      { name: 'Medium', info: 'Ø 20 cm · 4-6 stukken', price: 20.00 },
+      { name: 'Groot', info: 'Ø 24 cm · 8-10 stukken', price: 30.00 },
+      { name: 'Feest', info: 'Ø 28 cm · 12-16 stukken', price: 42.00 }
     ],
     details: { levertijd: '3 dagen', houdbaarheid: '5 dagen', allergenen: 'Gluten, ei, melk, alcohol' }
   },
@@ -46,9 +46,9 @@ const PRODUCTS = {
     desc: 'Bojo is de ultieme Surinaamse comfort cake — smeuïg, compact en boordevol kokossmaak. Gemaakt van verse geraspte cassave en kokosmelk, is deze cake van nature glutenvrij. Verkrijgbaar als witte bojo (vanille & amandel) of bruine bojo (kaneel).',
     ingredients: 'Geraspte cassave, kokosmelk, geraspte kokos, suiker, eieren, boter, vanille, kaneel, rozijnen',
     sizes: [
-      { name: 'Medium', info: 'Ø 24 cm · 6-8 pers.', price: 22.00 },
-      { name: 'Groot', info: 'Ø 28 cm · 10-12 pers.', price: 28.00 },
-      { name: 'Feest', info: 'Ø 35 cm · 14-18 pers.', price: 40.00 }
+      { name: 'Medium', info: 'Ø 24 cm · 6-8 stukken', price: 22.00 },
+      { name: 'Groot', info: 'Ø 28 cm · 10-12 stukken', price: 28.00 },
+      { name: 'Feest', info: 'Ø 35 cm · 14-18 stukken', price: 40.00 }
     ],
     details: { levertijd: '2 dagen', houdbaarheid: '3 dagen', allergenen: 'Ei, melk · Glutenvrij ✓' }
   },
@@ -59,9 +59,9 @@ const PRODUCTS = {
     desc: 'Onze Surinaamse appeltaart tilt de Nederlandse klassieker naar een hoger niveau. Met een scheutje Borgoe rum, gembersiroop en amandelessence krijgt de vulling een onweerstaanbaar aromatisch karakter. De krokante bodem en het gouden rasterpatroon maken het geheel af.',
     ingredients: 'Appels, bloem, roomboter, suiker, Borgoe rum, gembersiroop, amandelessence, rozijnen, kaneel, citroensap',
     sizes: [
-      { name: 'Medium', info: 'Ø 20 cm · 4-6 pers.', price: 18.00 },
-      { name: 'Groot', info: 'Ø 24 cm · 8-10 pers.', price: 26.00 },
-      { name: 'Feest', info: 'Ø 28 cm · 12-14 pers.', price: 35.00 }
+      { name: 'Medium', info: 'Ø 20 cm · 4-6 stukken', price: 18.00 },
+      { name: 'Groot', info: 'Ø 24 cm · 8-10 stukken', price: 26.00 },
+      { name: 'Feest', info: 'Ø 28 cm · 12-14 stukken', price: 35.00 }
     ],
     details: { levertijd: '2 dagen', houdbaarheid: '3 dagen', allergenen: 'Gluten, ei, melk, noten, alcohol' }
   }
