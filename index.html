@@ -58,8 +58,7 @@
       </div>
     </div>
     <div class="gallery-track" id="galleryTrack">
-      <div class="gallery-track-inner">
-        <!-- ORIGINALS & NEW IMAGES -->
+      <div class="gallery-track-inner" id="galleryTrackInner">
         <div class="gallery-item"><img src="images/hero-paramaribo.jpg" alt="Waterkant" loading="lazy"><span class="gallery-caption">Paramaribo Waterkant</span></div>
         <div class="gallery-item"><img src="images/suriname-waterval.jpg" alt="Watervallen" loading="lazy"><span class="gallery-caption">Verborgen Watervallen</span></div>
         <div class="gallery-item"><img src="images/suriname-markt.jpg" alt="Centrale Markt" loading="lazy"><span class="gallery-caption">Centrale Markt</span></div>
@@ -72,33 +71,24 @@
         <div class="gallery-item"><img src="images/suriname-awarradam.jpg" alt="Awarradam" loading="lazy"><span class="gallery-caption">Awarradam Sula</span></div>
         <div class="gallery-item"><img src="images/suriname-hindoe-tempel.jpg" alt="Hindoetempel" loading="lazy"><span class="gallery-caption">Arya Dewaker Tempel</span></div>
         <div class="gallery-item"><img src="images/suriname-amazone-rivier.jpg" alt="Jungle Rivier" loading="lazy"><span class="gallery-caption">Diepe Binnenland</span></div>
-        <div class="gallery-item"><img src="images/suriname-mangrove.jpg" alt="Mangrove" loading="lazy"><span class="gallery-caption">Mangrovekust</span></div>
-        <div class="gallery-item"><img src="images/suriname-commewijne.jpg" alt="Commewijne" loading="lazy"><span class="gallery-caption">Commewijnerivier</span></div>
-        <div class="gallery-item"><img src="images/suriname-bigi-pan.jpg" alt="Bigi Pan" loading="lazy"><span class="gallery-caption">Bigi Pan Reservaat</span></div>
-        <div class="gallery-item"><img src="images/suriname-voltzberg.jpg" alt="Voltzberg" loading="lazy"><span class="gallery-caption">Voltzberg Granietkoepel</span></div>
-        <div class="gallery-item"><img src="images/suriname-paleis.jpg" alt="Paleis" loading="lazy"><span class="gallery-caption">Presidentieel Paleis</span></div>
-        <div class="gallery-item"><img src="images/suriname-tafelberg.jpg" alt="Tafelberg" loading="lazy"><span class="gallery-caption">Tafelberg Tepui</span></div>
-
-        <!-- DUPLICATES FOR SEAMLESS LOOP -->
-        <div class="gallery-item"><img src="images/hero-paramaribo.jpg" alt="Waterkant" loading="lazy"><span class="gallery-caption">Paramaribo Waterkant</span></div>
-        <div class="gallery-item"><img src="images/suriname-waterval.jpg" alt="Watervallen" loading="lazy"><span class="gallery-caption">Verborgen Watervallen</span></div>
-        <div class="gallery-item"><img src="images/suriname-markt.jpg" alt="Centrale Markt" loading="lazy"><span class="gallery-caption">Centrale Markt</span></div>
-        <div class="gallery-item"><img src="images/suriname-markt-binnen.jpg" alt="Binnenmarkt" loading="lazy"><span class="gallery-caption">Kleurrijke Markt</span></div>
-        <div class="gallery-item"><img src="images/suriname-specerijen.jpg" alt="Specerijen" loading="lazy"><span class="gallery-caption">Onze Specerijen</span></div>
-        <div class="gallery-item"><img src="images/suriname-rivier.jpg" alt="Rivier" loading="lazy"><span class="gallery-caption">Surinamerivier</span></div>
-        <div class="gallery-item"><img src="images/amazone.jpg" alt="Amazone" loading="lazy"><span class="gallery-caption">Amazone Oerwoud</span></div>
-        <div class="gallery-item"><img src="images/suriname-religie.jpg" alt="Religie" loading="lazy"><span class="gallery-caption">Religieuze Harmonie</span></div>
-        <div class="gallery-item"><img src="images/suriname-zeeschildpad.jpg" alt="Zeeschildpad" loading="lazy"><span class="gallery-caption">Zeeschildpadden Galibi</span></div>
-        <div class="gallery-item"><img src="images/suriname-awarradam.jpg" alt="Awarradam" loading="lazy"><span class="gallery-caption">Awarradam Sula</span></div>
-        <div class="gallery-item"><img src="images/suriname-hindoe-tempel.jpg" alt="Hindoetempel" loading="lazy"><span class="gallery-caption">Arya Dewaker Tempel</span></div>
-        <div class="gallery-item"><img src="images/suriname-amazone-rivier.jpg" alt="Jungle Rivier" loading="lazy"><span class="gallery-caption">Diepe Binnenland</span></div>
-        <div class="gallery-item"><img src="images/suriname-mangrove.jpg" alt="Mangrove" loading="lazy"><span class="gallery-caption">Mangrovekust</span></div>
         <div class="gallery-item"><img src="images/suriname-commewijne.jpg" alt="Commewijne" loading="lazy"><span class="gallery-caption">Commewijnerivier</span></div>
         <div class="gallery-item"><img src="images/suriname-bigi-pan.jpg" alt="Bigi Pan" loading="lazy"><span class="gallery-caption">Bigi Pan Reservaat</span></div>
         <div class="gallery-item"><img src="images/suriname-voltzberg.jpg" alt="Voltzberg" loading="lazy"><span class="gallery-caption">Voltzberg Granietkoepel</span></div>
         <div class="gallery-item"><img src="images/suriname-paleis.jpg" alt="Paleis" loading="lazy"><span class="gallery-caption">Presidentieel Paleis</span></div>
         <div class="gallery-item"><img src="images/suriname-tafelberg.jpg" alt="Tafelberg" loading="lazy"><span class="gallery-caption">Tafelberg Tepui</span></div>
       </div>
+    </div>
+    <div class="gallery-controls">
+      <button class="gallery-ctrl-btn" id="galleryPrev" aria-label="Vorige">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="gallery-ctrl-btn gallery-ctrl-play" id="galleryPlayPause" aria-label="Pauzeer">
+        <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21"/></svg>
+      </button>
+      <button class="gallery-ctrl-btn" id="galleryNext" aria-label="Volgende">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
     </div>
   </section>
 
@@ -124,7 +114,7 @@
             <p>Iconische luchtige eiercake met een karakteristieke gele kleur, afgewerkt met kleurrijke suikermuisjes. Hét symbool van Surinaamse feestelijkheid.</p>
             <div class="product-meta">
               <span>📏 Ø 24 cm</span>
-              <span>👥 8-10 pers.</span>
+              <span>🍰 8-10 stukken</span>
               <span>⏱️ 2 dagen</span>
             </div>
             <div class="product-price">
@@ -149,7 +139,7 @@
             <p>Rijke, kruidige vruchtencake met rozijnen, krenten en pruimen, geweekt in Surinaamse rum. Een onweerstaanbare klassieker.</p>
             <div class="product-meta">
               <span>📏 Ø 24 cm</span>
-              <span>👥 8-10 pers.</span>
+              <span>🍰 8-10 stukken</span>
               <span>⏱️ 3 dagen</span>
             </div>
             <div class="product-price">
@@ -174,7 +164,7 @@
             <p>Smeuïge, glutenvrije cake van geraspte cassave en kokosmelk. Verkrijgbaar als witte bojo (vanille) of bruine bojo (kaneel).</p>
             <div class="product-meta">
               <span>📏 Ø 28 cm</span>
-              <span>👥 10-12 pers.</span>
+              <span>🍰 10-12 stukken</span>
               <span>⏱️ 2 dagen</span>
               <span>🌿 Glutenvrij</span>
             </div>
@@ -199,7 +189,7 @@
             <p>De bekende appeltaart, verrijkt met Borgoe rum, gembersiroop en amandelessence. Een rijkere, aromatischer versie.</p>
             <div class="product-meta">
               <span>📏 Ø 24 cm</span>
-              <span>👥 8-10 pers.</span>
+              <span>🍰 8-10 stukken</span>
               <span>⏱️ 2 dagen</span>
             </div>
             <div class="product-price">
@@ -221,14 +211,12 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-image fade-in" id="aboutImageSlider">
-          <img src="images/suriname-koto-misi.jpg" alt="Koto Misi" loading="lazy" class="about-slide active">
-          <img src="images/suriname-verlaten-plantage.jpg" alt="Plantage" loading="lazy" class="about-slide">
-          <img src="images/suriname-marrondorp.jpg" alt="Marrondorp" loading="lazy" class="about-slide">
-          <img src="images/suriname-amazone-lucht.jpg" alt="Amazone Lucht" loading="lazy" class="about-slide">
-          <img src="images/suriname-peperpot.jpg" alt="Peperpot" loading="lazy" class="about-slide">
-          <img src="images/suriname-jodensavanne.jpg" alt="Jodensavanne" loading="lazy" class="about-slide">
-          <img src="images/suriname-huizen.jpg" alt="Koloniale Huizen" loading="lazy" class="about-slide">
+          <img src="images/suriname-commewijne.jpg" alt="Commewijne" loading="lazy" class="about-slide active">
+          <img src="images/suriname-specerijen.jpg" alt="Specerijen" loading="lazy" class="about-slide">
+          <img src="images/suriname-markt-binnen.jpg" alt="Markt" loading="lazy" class="about-slide">
           <img src="images/suriname-palmentuin.jpg" alt="Palmentuin" loading="lazy" class="about-slide">
+          <img src="images/suriname-huizen.jpg" alt="Koloniale Huizen" loading="lazy" class="about-slide">
+          <img src="images/suriname-religie.jpg" alt="Religie" loading="lazy" class="about-slide">
         </div>
         <div class="about-content fade-in">
           <span class="section-label">Ons Verhaal</span>
