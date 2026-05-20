@@ -336,7 +336,7 @@ h1, h2, h3, h4 {
 .gallery-track-inner {
   display: flex;
   gap: 1.5rem;
-  animation: galleryScroll 60s linear infinite;
+  animation: galleryScroll 120s linear infinite;
   width: max-content;
 }
 

@@ -2,22 +2,13 @@
 // Sranang Koekoe — App Logic
 // ============================================
 
-// ---- Hero Background Slideshow ----
+// ---- Hero Background — random on load, fixed for session ----
 (function() {
   const heroSlides = document.querySelectorAll('.hero-slide');
   if (heroSlides.length <= 1) return;
-  
-  // Random start on each page load
   const startIndex = Math.floor(Math.random() * heroSlides.length);
   heroSlides.forEach(s => s.classList.remove('active'));
   heroSlides[startIndex].classList.add('active');
-  
-  let current = startIndex;
-  setInterval(() => {
-    heroSlides[current].classList.remove('active');
-    current = (current + 1) % heroSlides.length;
-    heroSlides[current].classList.add('active');
-  }, 6000);
 })();
 
 // ---- Product Data ----
