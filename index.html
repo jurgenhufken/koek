@@ -217,11 +217,19 @@
 
       <div class="famiri-grid">
         <div class="famiri-gift-card fade-in">
-          <div class="famiri-gift-img">
+          <div class="famiri-gift-img" onclick="openLightbox('images/famiri-gift.jpg')" style="cursor:zoom-in">
             <img src="images/famiri-gift.jpg" alt="Famiri Welkomstcadeau" loading="lazy">
           </div>
           <div class="famiri-gift-badge">VIP CADEAU</div>
-          <p class="famiri-gift-desc">Bij je eerste bestelling als Famiri-lid ontvang je een <strong>exclusieve Limited Edition art print</strong> van Suriname — prachtig ingelijst, klaar om op te hangen.</p>
+          <p class="famiri-gift-desc">Bij je eerste bestelling als Famiri-lid ontvang je een <strong>exclusieve Limited Edition art print</strong> van Suriname — prachtig ingelijst, klaar om op te hangen. <em>Kies hieronder jouw favoriete motief.</em></p>
+          <div class="famiri-photo-chooser">
+            <div class="famiri-thumb active" onclick="selectFamiriPhoto(this)" data-src="images/hero-paramaribo.jpg"><img src="images/hero-paramaribo.jpg" alt="Waterkant"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-waterval.jpg"><img src="images/suriname-waterval.jpg" alt="Waterval"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-rivier.jpg"><img src="images/suriname-rivier.jpg" alt="Rivier"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-awarradam.jpg"><img src="images/suriname-awarradam.jpg" alt="Awarradam"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-bigi-pan.jpg"><img src="images/suriname-bigi-pan.jpg" alt="Bigi Pan"></div>
+            <div class="famiri-thumb" onclick="selectFamiriPhoto(this)" data-src="images/suriname-voltzberg.jpg"><img src="images/suriname-voltzberg.jpg" alt="Voltzberg"></div>
+          </div>
         </div>
 
         <div class="famiri-benefits fade-in">
@@ -229,21 +237,21 @@
             <span class="famiri-benefit-icon">🎁</span>
             <div>
               <h4>Welkomstcadeau</h4>
-              <p>Exclusieve Suriname art print bij je eerste bestelling</p>
+              <p>Kies je favoriete Suriname-print — ingelijst en gratis bij je eerste bestelling</p>
             </div>
           </div>
           <div class="famiri-benefit">
             <span class="famiri-benefit-icon">💰</span>
             <div>
-              <h4>Vaste Korting</h4>
-              <p>Levenslang Famiri-korting op al je bestellingen</p>
+              <h4>12% Famiri-korting</h4>
+              <p>Levenslang korting op al je bestellingen met je persoonlijke code</p>
             </div>
           </div>
           <div class="famiri-benefit">
             <span class="famiri-benefit-icon">🎬</span>
             <div>
               <h4>Achter de Schermen</h4>
-              <p>Exclusieve toegang tot behind-the-scenes content</p>
+              <p>Exclusieve toegang tot behind-the-scenes content uit onze keuken</p>
             </div>
           </div>
           <div class="famiri-benefit">
@@ -255,15 +263,19 @@
           </div>
 
           <div class="famiri-signup">
-            <h3>Word nu Famiri — het is gratis</h3>
+            <div class="famiri-price-tag">
+              <span class="famiri-price">€4,95</span>
+              <span class="famiri-price-label">per maand · steun het ambacht</span>
+            </div>
             <form id="famiriForm" class="famiri-form" action="https://formspree.io/f/mlgvjpgz" method="POST">
               <input type="hidden" name="_subject" value="Nieuw Famiri-lid!">
               <input type="hidden" name="type" value="famiri-aanmelding">
-              <input type="text" name="naam" placeholder="Je naam" required>
+              <input type="hidden" name="gekozen_print" id="famiriChosenPrint" value="Paramaribo Waterkant">
+              <input type="text" name="naam" placeholder="Je volledige naam" required>
               <input type="email" name="email" placeholder="Je e-mailadres" required>
-              <button type="submit" class="famiri-submit-btn">Ja, ik word Famiri! 🎉</button>
+              <button type="submit" class="famiri-submit-btn">Word Famiri — €4,95/mnd 🎉</button>
             </form>
-            <p class="famiri-disclaimer">Geen spam, alleen koek. Je kunt je altijd uitschrijven.</p>
+            <p class="famiri-disclaimer">Je ontvangt je persoonlijke Famiri-code per e-mail. Opzeggen kan altijd. Het cadeau wordt bij je eerste bestelling meegeleverd.</p>
           </div>
         </div>
       </div>
