@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sranang Koekoe — Verse Surinaamse Koek Bestellen</title>
+  <meta name="description" content="Bestel verse, ambachtelijke Surinaamse koek online. Eksi Kuku, Keksi, Bojo en Surinaamse Appeltaart — vers gebakken en bezorgd in heel Nederland.">
+  <meta name="keywords" content="Surinaamse koek, eksi kuku, keksi, bojo, Surinaamse appeltaart, bestellen, catering">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo"><span>🇸🇷</span> Sranang Koekoe</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#producten">Producten</a></li>
+        <li><a href="#over-ons">Over Ons</a></li>
+        <li><a href="#bestellen">Bestellen</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#bestellen" class="nav-cta">Bestel Nu</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero-paramaribo.jpg" alt="Paramaribo waterkant bij zonsondergang" loading="eager">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">✨ Vers gebakken op bestelling</div>
+        <h1>Authentieke <span class="gold">Surinaamse Koek</span> bij jou bezorgd</h1>
+        <p>Van smeuïge Bojo tot luchtige Eksi Kuku — ambachtelijk gebakken met liefde, volgens traditionele recepten uit Suriname.</p>
+        <div class="hero-buttons">
+          <a href="#producten" class="btn btn-primary">Bekijk Assortiment →</a>
+          <a href="#over-ons" class="btn btn-outline">Ons Verhaal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SURINAME SHOWCASE ====== -->
+  <section id="suriname" class="suriname-showcase">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Geïnspireerd door Suriname</span>
+        <h2 class="section-title">De Smaak van Ons Land</h2>
+        <p class="section-subtitle">Onze koeken dragen de ziel van Suriname — van de Paramaribo waterkant tot het hart van het Amazone-oerwoud.</p>
+      </div>
+    </div>
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-track-inner">
+        <div class="gallery-item">
+          <img src="images/hero-paramaribo.jpg" alt="Paramaribo Waterkant" loading="lazy">
+          <span class="gallery-caption">Paramaribo Waterkant</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-waterval.jpg" alt="Raleighvallen" loading="lazy">
+          <span class="gallery-caption">Verborgen Watervallen</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-huizen.jpg" alt="Koloniale architectuur" loading="lazy">
+          <span class="gallery-caption">UNESCO Werelderfgoed</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-markt.jpg" alt="Surinaamse markt" loading="lazy">
+          <span class="gallery-caption">Centrale Markt</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-specerijen.jpg" alt="Surinaamse specerijen" loading="lazy">
+          <span class="gallery-caption">Onze Specerijen</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-rivier.jpg" alt="Korjaal op de rivier" loading="lazy">
+          <span class="gallery-caption">Suriname Rivier</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-palmentuin.jpg" alt="Palmentuin Paramaribo" loading="lazy">
+          <span class="gallery-caption">De Palmentuin</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/amazone.jpg" alt="Amazone regenwoud" loading="lazy">
+          <span class="gallery-caption">Amazone Oerwoud</span>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="gallery-item">
+          <img src="images/hero-paramaribo.jpg" alt="Paramaribo Waterkant" loading="lazy">
+          <span class="gallery-caption">Paramaribo Waterkant</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-waterval.jpg" alt="Raleighvallen" loading="lazy">
+          <span class="gallery-caption">Verborgen Watervallen</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-huizen.jpg" alt="Koloniale architectuur" loading="lazy">
+          <span class="gallery-caption">UNESCO Werelderfgoed</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/suriname-markt.jpg" alt="Surinaamse markt" loading="lazy">
+          <span class="gallery-caption">Centrale Markt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRODUCTEN ====== -->
+  <section id="producten">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Ons Assortiment</span>
+        <h2 class="section-title">Traditionele Surinaamse Lekkernijen</h2>
+        <p class="section-subtitle">Elk product wordt vers gebakken met de beste ingrediënten, volgens authentieke Surinaamse recepten.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Eksi Kuku -->
+        <div class="product-card fade-in" data-product="eksi-kuku">
+          <div class="product-card-img">
+            <img src="images/eksi-kuku.jpg" alt="Eksi Kuku - Surinaamse Gele Koek" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <h3>Eksi Kuku</h3>
+            <p class="product-subtitle">Surinaamse Gele Koek</p>
+            <p>Iconische luchtige eiercake met een karakteristieke gele kleur, afgewerkt met kleurrijke suikermuisjes. Hét symbool van Surinaamse feestelijkheid.</p>
+            <div class="product-meta">
+              <span>📏 Ø 24 cm</span>
+              <span>👥 8-10 pers.</span>
+              <span>⏱️ 2 dagen</span>
+            </div>
+            <div class="product-price">
+              <div>
+                <span class="price">€27,50</span>
+                <span class="price-label">hele taart</span>
+              </div>
+              <button class="btn-add" onclick="addToCart('eksi-kuku', 'Eksi Kuku', 27.50, 'images/eksi-kuku.jpg')">+ Toevoegen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Keksi Trafasie -->
+        <div class="product-card fade-in" data-product="keksi">
+          <div class="product-card-img">
+            <img src="images/keksi.jpg" alt="Keksi - Surinaamse Bruine Koek" loading="lazy">
+            <span class="product-badge">Populair</span>
+          </div>
+          <div class="product-card-body">
+            <h3>Keksi</h3>
+            <p class="product-subtitle">Surinaamse Bruine Koek</p>
+            <p>Rijke, kruidige vruchtencake met rozijnen, krenten en pruimen, geweekt in Surinaamse rum. Een onweerstaanbare klassieker.</p>
+            <div class="product-meta">
+              <span>📏 Ø 24 cm</span>
+              <span>👥 8-10 pers.</span>
+              <span>⏱️ 3 dagen</span>
+            </div>
+            <div class="product-price">
+              <div>
+                <span class="price">€30,00</span>
+                <span class="price-label">hele taart</span>
+              </div>
+              <button class="btn-add" onclick="addToCart('keksi', 'Keksi', 30.00, 'images/keksi.jpg')">+ Toevoegen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bojo -->
+        <div class="product-card fade-in" data-product="bojo">
+          <div class="product-card-img">
+            <img src="images/bojo.jpg" alt="Bojo - Surinaamse Cassave Kokoscake" loading="lazy">
+            <span class="product-badge" style="background: var(--clr-burgundy)">Glutenvrij</span>
+          </div>
+          <div class="product-card-body">
+            <h3>Bojo</h3>
+            <p class="product-subtitle">Cassave-Kokoscake</p>
+            <p>Smeuïge, glutenvrije cake van geraspte cassave en kokosmelk. Verkrijgbaar als witte bojo (vanille) of bruine bojo (kaneel).</p>
+            <div class="product-meta">
+              <span>📏 Ø 28 cm</span>
+              <span>👥 10-12 pers.</span>
+              <span>⏱️ 2 dagen</span>
+              <span>🌿 Glutenvrij</span>
+            </div>
+            <div class="product-price">
+              <div>
+                <span class="price">€28,00</span>
+                <span class="price-label">hele taart</span>
+              </div>
+              <button class="btn-add" onclick="addToCart('bojo', 'Bojo', 28.00, 'images/bojo.jpg')">+ Toevoegen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surinaamse Appeltaart -->
+        <div class="product-card fade-in" data-product="appeltaart">
+          <div class="product-card-img">
+            <img src="images/appeltaart.jpg" alt="Surinaamse Appeltaart" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <h3>Surinaamse Appeltaart</h3>
+            <p class="product-subtitle">Tropische twist op een klassieker</p>
+            <p>De bekende appeltaart, verrijkt met Borgoe rum, gembersiroop en amandelessence. Een rijkere, aromatischer versie.</p>
+            <div class="product-meta">
+              <span>📏 Ø 24 cm</span>
+              <span>👥 8-10 pers.</span>
+              <span>⏱️ 2 dagen</span>
+            </div>
+            <div class="product-price">
+              <div>
+                <span class="price">€26,00</span>
+                <span class="price-label">hele taart</span>
+              </div>
+              <button class="btn-add" onclick="addToCart('appeltaart', 'Surinaamse Appeltaart', 26.00, 'images/appeltaart.jpg')">+ Toevoegen</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== OVER ONS ====== -->
+  <section id="over-ons">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-in" id="aboutImageSlider">
+          <img src="images/amazone.jpg" alt="Suriname" loading="lazy" class="about-slide active">
+          <img src="images/suriname-rivier.jpg" alt="Suriname Rivier" loading="lazy" class="about-slide">
+          <img src="images/suriname-palmentuin.jpg" alt="Palmentuin" loading="lazy" class="about-slide">
+          <img src="images/suriname-huizen.jpg" alt="Paramaribo" loading="lazy" class="about-slide">
+          <img src="images/suriname-waterval.jpg" alt="Waterval" loading="lazy" class="about-slide">
+        </div>
+        <div class="about-content fade-in">
+          <span class="section-label">Ons Verhaal</span>
+          <h2>Met Liefde Gebakken, <span style="color: var(--clr-primary)">Uit Traditie</span></h2>
+          <p>Onze recepten zijn doorgegeven van generatie op generatie. Elke koek wordt met zorg bereid, met verse ingrediënten en zonder conserveringsmiddelen.</p>
+          <p>Of het nu gaat om een verjaardag, Keti Koti, een bruiloft of gewoon een moment van verwennerij — wij bakken met passie voor elke gelegenheid.</p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="about-feature-icon">🏡</span>
+              <div>
+                <h4>Ambachtelijk</h4>
+                <p>Huisgemaakt, geen fabriek</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">🌿</span>
+              <div>
+                <h4>Verse Ingrediënten</h4>
+                <p>Geen conserveringsmiddelen</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">🚚</span>
+              <div>
+                <h4>Bezorging</h4>
+                <p>Door heel Nederland</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">🎉</span>
+              <div>
+                <h4>Feestpakketten</h4>
+                <p>Voor elk evenement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== BESTELLEN ====== -->
+  <section id="bestellen">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Bestellen</span>
+        <h2 class="section-title">Plaats Je Bestelling</h2>
+        <p class="section-subtitle">Selecteer producten hierboven en vul je gegevens in. Wij nemen binnen 24 uur contact met je op.</p>
+      </div>
+
+      <div class="order-wrapper">
+        <!-- Form -->
+        <form class="order-form fade-in" id="orderForm" onsubmit="submitOrder(event)">
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">Jouw Gegevens</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Voornaam *</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="Je voornaam">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Achternaam *</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Je achternaam">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mailadres *</label>
+            <input type="email" id="email" name="email" required placeholder="naam@voorbeeld.nl">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefoonnummer *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="06-12345678">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="deliveryDate">Gewenste datum *</label>
+              <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </div>
+            <div class="form-group">
+              <label for="deliveryType">Bezorgen / Ophalen *</label>
+              <select id="deliveryType" name="deliveryType" required>
+                <option value="">Kies een optie</option>
+                <option value="bezorgen">Bezorgen (€7,50)</option>
+                <option value="ophalen">Ophalen (gratis)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" id="addressGroup" style="display: none;">
+            <label for="address">Bezorgadres</label>
+            <input type="text" id="address" name="address" placeholder="Straat, huisnummer, postcode, plaats">
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Opmerkingen</label>
+            <textarea id="notes" name="notes" placeholder="Eventuele wensen, allergieën of dieetvereisten..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" id="submitBtn">
+            Bestelling Verzenden →
+          </button>
+        </form>
+
+        <!-- Order Summary -->
+        <div class="order-summary fade-in" id="orderSummary">
+          <h3>Jouw Bestelling</h3>
+          <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+              <p>🛒 Je winkelwagen is leeg</p>
+              <p style="font-size: 0.8rem; margin-top: 0.5rem;">Klik op "+ Toevoegen" bij een product</p>
+            </div>
+          </div>
+          <div class="order-totals" id="orderTotals" style="display: none;">
+            <div class="order-total-row">
+              <span>Subtotaal</span>
+              <span id="subtotal">€0,00</span>
+            </div>
+            <div class="order-total-row">
+              <span>Bezorging</span>
+              <span id="deliveryCost">€0,00</span>
+            </div>
+            <div class="order-total-row total">
+              <span>Totaal</span>
+              <span id="totalAmount">€0,00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Neem Contact Op</h2>
+        <p class="section-subtitle">Vragen over een bestelling of wil je een feestpakket op maat? Wij helpen je graag!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card fade-in">
+          <span class="contact-icon">📞</span>
+          <h3>Bel Ons</h3>
+          <p><a href="tel:+31612345678">06 - 1234 5678</a></p>
+          <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Ma-Za 9:00 - 18:00</p>
+        </div>
+        <div class="contact-card fade-in">
+          <span class="contact-icon">💬</span>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/31612345678">Stuur een bericht</a></p>
+          <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Snelste reactie</p>
+        </div>
+        <div class="contact-card fade-in">
+          <span class="contact-icon">📧</span>
+          <h3>E-mail</h3>
+          <p><a href="mailto:info@sranangkoekoe.nl">info@sranangkoekoe.nl</a></p>
+          <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Reactie binnen 24 uur</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>© 2026 Sranang Koekoe — Ambachtelijke Surinaamse Koek</p>
+        <ul class="footer-links">
+          <li><a href="#producten">Producten</a></li>
+          <li><a href="#bestellen">Bestellen</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Order Confirmation Overlay -->
+  <div class="modal-overlay" id="confirmationModal">
+    <div class="modal" style="grid-template-columns: 1fr; max-width: 550px; text-align: center;">
+      <div class="modal-body" style="padding: 3rem;">
+        <button class="modal-close" onclick="closeConfirmation()" style="position: absolute; top: 1rem; right: 1rem;">✕</button>
+        <div style="font-size: 4rem; margin-bottom: 1rem;" id="confirmIcon">🎉</div>
+        <h2 id="confirmTitle">Bestelling Ontvangen!</h2>
+        <p class="modal-desc" id="confirmMessage" style="margin-top: 1rem;">
+          Bedankt voor je bestelling. Je ontvangt een bevestiging per e-mail. Wij nemen binnen 24 uur contact met je op om de bestelling te bevestigen.
+        </p>
+        <div id="confirmDetails" style="background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.5rem; margin: 1.5rem 0; text-align: left;"></div>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+          <a href="#" class="btn btn-primary" onclick="closeConfirmation(); return false;">Nieuwe Bestelling</a>
+          <a id="whatsappLink" href="#" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366;">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
