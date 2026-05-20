@@ -96,11 +96,18 @@ h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--clr-primary);
+  color: #fff;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav.scrolled .nav-logo {
+  color: var(--clr-primary);
+  text-shadow: none;
 }
 
 .nav-logo span { font-size: 1.8rem; }
@@ -112,13 +119,19 @@ h1, h2, h3, h4 {
 }
 
 .nav-links a {
-  color: var(--text-secondary);
+  color: #fff;
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
   position: relative;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.nav.scrolled .nav-links a {
+  color: var(--text-primary);
+  text-shadow: none;
 }
 
 .nav-links a::after {
@@ -126,11 +139,16 @@ h1, h2, h3, h4 {
   position: absolute;
   bottom: -4px; left: 0;
   width: 0; height: 2px;
-  background: var(--clr-primary);
+  background: #fff;
   transition: width 0.3s;
 }
 
-.nav-links a:hover { color: var(--clr-primary); }
+.nav.scrolled .nav-links a::after {
+  background: var(--clr-primary);
+}
+
+.nav-links a:hover { color: var(--gold-light); }
+.nav.scrolled .nav-links a:hover { color: var(--clr-primary); }
 .nav-links a:hover::after { width: 100%; }
 
 .nav-cta {
