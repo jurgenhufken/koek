@@ -69,6 +69,45 @@ const PRODUCTS = {
 
 const cart = {};
 let deliveryFee = 0;
+let famiriDiscount = 0; // 0 = no discount, 0.12 = 12%
+
+// ---- Famiri Loyalty System ----
+const FAMIRI_CODES = ['FAMIRI2026', 'FAMIRI-VIP', 'SRANANG-FAMIRI']; // Add codes here
+const FAMIRI_DISCOUNT_PERCENT = 0.12;
+
+function applyDiscount() {
+  const input = document.getElementById('famiriCode');
+  const msg = document.getElementById('famiriCodeMsg');
+  const code = input.value.trim().toUpperCase();
+
+  if (!code) {
+    msg.textContent = '';
+    msg.className = 'famiri-code-msg';
+    return;
+  }
+
+  if (FAMIRI_CODES.includes(code)) {
+    famiriDiscount = FAMIRI_DISCOUNT_PERCENT;
+    msg.textContent = '✓ Famiri-code geaccepteerd! 12% korting toegepast.';
+    msg.className = 'famiri-code-msg success';
+    input.style.borderColor = '#27ae60';
+    renderCart();
+  } else {
+    famiriDiscount = 0;
+    msg.textContent = '✗ Ongeldige code. Word Famiri om een code te ontvangen.';
+    msg.className = 'famiri-code-msg error';
+    input.style.borderColor = '#e74c3c';
+    renderCart();
+  }
+}
+
+function selectFamiriPhoto(el) {
+  document.querySelectorAll('.famiri-thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  const altText = el.querySelector('img')?.alt || 'Suriname';
+  const hiddenInput = document.getElementById('famiriChosenPrint');
+  if (hiddenInput) hiddenInput.value = altText;
+}
 
 // ---- Navigation ----
 const navbar = document.getElementById('navbar');

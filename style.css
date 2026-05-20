@@ -737,8 +737,108 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+/* Photo Chooser */
+.famiri-photo-chooser {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem 1.5rem;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.famiri-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+
+.famiri-thumb:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.famiri-thumb.active {
+  border-color: var(--clr-primary);
+  opacity: 1;
+  box-shadow: 0 2px 12px rgba(212, 168, 67, 0.4);
+}
+
+.famiri-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Price Tag */
+.famiri-price-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.famiri-price {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.famiri-price-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Discount Code in Order Form */
+.famiri-code-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.famiri-code-row input {
+  flex: 1;
+}
+
+.famiri-code-btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.famiri-code-btn:hover {
+  background: var(--clr-primary-dark);
+}
+
+.famiri-code-msg {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  min-height: 1.2em;
+}
+
+.famiri-code-msg.success { color: #27ae60; }
+.famiri-code-msg.error { color: #e74c3c; }
+
+/* Discount Row */
+.discount-row span:first-child {
+  color: #27ae60;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .famiri-grid { grid-template-columns: 1fr; }
+  .famiri-thumb { width: 50px; height: 50px; }
 }
 
 /* ============ OVER ONS ============ */

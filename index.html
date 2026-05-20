@@ -395,6 +395,15 @@
             <textarea id="notes" name="notes" placeholder="Eventuele wensen, allergieën of dieetvereisten..."></textarea>
           </div>
 
+          <div class="form-group famiri-code-group">
+            <label for="famiriCode">Famiri-code <span style="font-weight:400; color: var(--text-secondary);">(optioneel)</span></label>
+            <div class="famiri-code-row">
+              <input type="text" id="famiriCode" name="famiriCode" placeholder="Bijv. FAMIRI2026" autocomplete="off">
+              <button type="button" class="famiri-code-btn" onclick="applyDiscount()">Toepassen</button>
+            </div>
+            <p class="famiri-code-msg" id="famiriCodeMsg"></p>
+          </div>
+
           <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" id="submitBtn">
             Bestelling Verzenden →
           </button>
@@ -413,6 +422,10 @@
             <div class="order-total-row">
               <span>Subtotaal</span>
               <span id="subtotal">€0,00</span>
+            </div>
+            <div class="order-total-row discount-row" id="discountRow" style="display: none;">
+              <span>Famiri-korting (12%)</span>
+              <span id="discountAmount" style="color: #27ae60;">−€0,00</span>
             </div>
             <div class="order-total-row">
               <span>Bezorging</span>
