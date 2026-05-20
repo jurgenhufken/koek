@@ -2,14 +2,14 @@
 // Sranang Koekoe — App Logic
 // ============================================
 
-// ---- Hero Background — random on load, fixed for session ----
-(function() {
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  if (heroSlides.length <= 1) return;
-  const startIndex = Math.floor(Math.random() * heroSlides.length);
-  heroSlides.forEach(s => s.classList.remove('active'));
-  heroSlides[startIndex].classList.add('active');
-})();
+  // ---- Hero Background — random on load, fixed for session ----
+  (function () {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length <= 1) return;
+    const startIndex = Math.floor(Math.random() * heroSlides.length);
+    heroSlides.forEach(s => s.classList.remove('active'));
+    heroSlides[startIndex].classList.add('active');
+  })();
 
 // ---- Product Data ----
 const PRODUCTS = {
@@ -521,7 +521,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ---- Gallery Strip with Controls ----
-(function() {
+(function () {
   const track = document.getElementById('galleryTrackInner');
   const trackWrap = document.getElementById('galleryTrack');
   const prevBtn = document.getElementById('galleryPrev');
@@ -613,7 +613,7 @@ document.addEventListener('keydown', (e) => {
 })();
 
 // ---- About Image Slideshow ----
-(function() {
+(function () {
   const slides = document.querySelectorAll('.about-slide');
   if (slides.length <= 1) return;
   let current = 0;
